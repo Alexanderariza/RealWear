@@ -147,6 +147,14 @@ new L.Marker([52.50641990480189,13.324913978576662, {
               '<span class="my-div-span">RAF Banff Airfield</span>'
     })
 });
+
+	      var marker = L.marker(latlng)
+    .bindTooltip("Test Label", 
+    {
+        permanent: true, 
+        direction: 'right'
+    }
+);
  
 		
 	var popup = L.popup();
