@@ -140,11 +140,14 @@
             .bindPopup("<b>PANONO 360°:</b><br>Photo 1")
             .openPopup();
 		
-// ventanas emergentes ————————————-
-L.marker([52.50643296549554,13.32495152950287])
-.addTo(map)
-.bindPopup(‘Esta es mi ubicación’)
-.openPopup();
+
+// añadir un circulo ————————————-
+var circle = L.circle([52.50643296549554,13.32495152950287], {
+color: ‘red’,
+fillColor: ‘#f03’,
+fillOpacity: 0.5,
+radius: 45
+}).addTo(map);		
 		
 	var popup = L.popup();
 // Adiciona pup de coordenada
