@@ -138,7 +138,20 @@
 	var marker = L.marker([52.50638725305076,13.325799107551576])
             .addTo(map)
             .bindPopup("<b>PANONO 360°:</b><br>Photo 1")
-            .openPopup();		
+            .openPopup();
+		
+	var myIcon = L.icon({
+	iconUrl: 'my-icon.png',
+	iconSize: [20, 20],
+	iconAnchor: [10, 10],
+	labelAnchor: [6, 0] // as I want the label to appear 2px past the icon (10 + 2 - 6)
+});
+L.marker([52.50648194306222,13.32496225833893], {
+	icon: myIcon
+}).bindLabel('My label', {
+	noHide: true,
+	direction: 'auto'
+});	
 		
 	var popup = L.popup();
 // Adiciona pup de coordenada
